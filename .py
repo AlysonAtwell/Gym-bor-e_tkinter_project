@@ -1,7 +1,7 @@
 from tkinter import *
-from PIL import ImageTk, Image
+#from PIL import ImageTk, Image
 
-
+#Photo
 root = Tk() 
 #root.iconbitmap("E:\Gym-bor-e_tkinter_project\images\4042280_dumbell_gym_healthy life_take exercise_training_icon.png")
 #root.iconphoto(True, root)
@@ -23,8 +23,9 @@ def openwindow():
 btn=Button(root, text="Open Window", command = openwindow)
 btn.pack(padx=20, pady=20)
 
-Button(root,text= "Close Openend Window", command=lambda: new_window.destroy()).pack()
+Button(root,text= "Close Window", command=lambda: new_window.destroy()).pack()
 
+####-Login setup--------
 root.geometry("925x500+300+200")#Set the geometry of frame
 root.title("Main_window")# Title of Application
 root.configure(bg="#fff")
@@ -79,8 +80,8 @@ def on_leave(e):
 
                        
 confirm_code = Entry(frame,width=25,fg='black', border=0,bg='white', font=('Helvetica',11))
-confirm_code.place(x=30, y=150)
-confirm_code.insert(0,'Password')
+confirm_code.place(x=30, y=220)
+confirm_code.insert(0,'Confirm Password')
 confirm_code.bind("<FocusIn>", on_enter)
 confirm_code.bind("<FocusOut>", on_leave)
          
@@ -90,11 +91,10 @@ Button(frame, text="Sign up", width=39, pady=7, bg="blue", fg= "white", border=0
 label=Label(frame, text="I have an account", fg = 'black', bg = 'white', cursor='hand2', font=('Helvetica',9))
 label.place(x=90,y=340)
 
-sign_In_btn=Button(root, text="Sign In", command=openwindow, width=39, pady=7, border=0, bg="white", cursor='hand2', fg="blue")
-btn.pack(padx=20, pady=20)
+sign_In=Button(frame, text="Sign In", width=6, border=0, bg="white", cursor='hand2', fg="blue")
+sign_In.place(x=200, y= 340)
 
-sign_Up_btn=Button(root, text="Sign Up", command=openwindow, width=39, pady=7, border=0, bg="white", cursor='hand2', fg="blue")
-btn.pack(padx=20, pady=20)
+
 
 
 
