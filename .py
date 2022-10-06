@@ -6,24 +6,7 @@ root = Tk()
 #root.iconbitmap("E:\Gym-bor-e_tkinter_project\images\4042280_dumbell_gym_healthy life_take exercise_training_icon.png")
 #root.iconphoto(True, root)
 
-new_window =""
-def openwindow():
-    global new_window
-    new_window = Toplevel(root)
-    new_window.geometry("250x250")
-    new_window.title("New Window")
-    new_window.resizable(False, False) # can not be resizing window.
-    lbl = Label(new_window, text="I am the new window")
-    lbl.pack()
-    btn2 =Button(new_window, text="Close Me", command=lambda: new_window.destroy())
-    btn2.pack()
 
-
-#Registration for new users
-btn=Button(root, text="Open Window", command = openwindow)
-btn.pack(padx=20, pady=20)
-
-Button(root,text= "Close Window", command=lambda: new_window.destroy()).pack()
 
 ####-Login setup--------
 root.geometry("925x500+300+200")#Set the geometry of frame
@@ -53,7 +36,7 @@ user.insert(0,'Username')
 user.bind("<FocusIn>", on_enter)
 user.bind("<FocusOut>", on_leave)
 
-Frame(frame,width=295,height=2,bg='black').place(x=25, y=107)
+Frame(frame,width=295,height=2,bg='black').place(x=25, y=107) #line 
 
 ###Password Entry ------------------------------------------
 def on_enter(e):
@@ -69,7 +52,7 @@ code.insert(0,'Password')
 code.bind("<FocusIn>", on_enter)
 code.bind("<FocusOut>", on_leave)
          
-Frame(frame,width=295,height=2,bg='black').place(x=25, y=177)  
+Frame(frame,width=295,height=2,bg='black').place(x=25, y=177) #Line 
 
 ###Confirm Code--------------------------------                                                         
 def on_enter(e):
