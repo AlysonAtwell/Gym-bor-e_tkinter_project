@@ -1,6 +1,8 @@
 from tkinter import * 
 from random import randint
 from turtle import right
+from PIL import
+
 
 root = Tk() # initialize tkinter 
 root.title( "Random workout")# Title of Application
@@ -27,14 +29,14 @@ def openwindow():
 
 
 
-#chairimage = PhotoImage(file=) #
-#chairstand = PhotoImage(file=) #
-#lay_down = PhotoImage(file=) #
-#positionimages= [chairimage,chairstand,lay_down] # Position for exercise
+chairimage = PhotoImage(file="E:\Gym-bor-e_tkinter_project\photos for gui\exercise - Copy.png") #
+standimage = PhotoImage(file="E:\Gym-bor-e_tkinter_project\photos for gui\chair.png") #
+floorimage = PhotoImage(file="E:\Gym-bor-e_tkinter_project\photos for gui\exercises.png") #
+positionimages= ["chairimage","standimage',"floorimage"] # Position for exercise
 
-chair_warmup=["Neck Stretch","Knee Lifts","Sit and Stand","Heel Slides","Tummy Twists for Abs","Seated Jumping Jacks","Seated Forward Bend","Knee to Chest","Ankle Rotations","Bicep curls with Resistance Bands"]
-stand=["Squats","Arm Circles: to release tension in your shoulders","Overhead arm reaches: the best exercise to kickstart energy and muscle warmth","Hip Rotations: ideal for loosening your lower body","Side knee lifts: the best exercise for strengthening your core","Squat with arm lift: for an entire body burn","Squat with reaches: to fire up your glutes","Lunges: to warmup your thighs","Jumping Jacks: to increase blood flow and loosen your entire body","Plank Walk Outs: to engage your core, hamstrings, and shoulders","High Knees: get your blood pumping and activates the muscles","Jumping Rope: maximize your heart rate","Knee Lifts", "Stand and Sit", "squat"]
-lay_down=["Heel Touch", "Toe Taps","Overhead arm reaches: the best exercise to kickstart energy and muscle warmth","Push-ups: for an all-over arm burn","Snow Angels: to increase blood flow and loosen your entire body","Plank Walk Outs: to engage your core, hamstrings, and shoulders","High Knees: get your blood pumping and activates the muscles","Hug knees to chest"]
+chair=["Neck Stretch","Knee Lifts","Sit and Stand","Heel Slides","Tummy Twists for Abs","Seated Jumping Jacks","Seated Forward Bend","Knee to Chest","Ankle Rotations","Bicep curls with Resistance Bands"]
+stand=["Knee Lifts","Sit and Stand","Squats","Arm Circles: to release tension in your shoulders","Overhead arm reaches: the best exercise to kickstart energy and muscle warmth","Hip Rotations: ideal for loosening your lower body","Side knee lifts: the best exercise for strengthening your core","Squat with arm lift: for an entire body burn","Squat with reaches: to fire up your glutes","Lunges: to warmup your thighs","Jumping Jacks: to increase blood flow and loosen your entire body","Plank Walk Outs: to engage your core, hamstrings, and shoulders","High Knees: get your blood pumping and activates the muscles","Jumping Rope: maximize your heart rate","Knee Lifts", "Stand and Sit", "squat"]
+floor=["Knee to Chest","dead bug","Heel Touch", "Toe Taps","Overhead arm reaches: the best exercise to kickstart energy and muscle warmth","Push-ups: for an all-over arm burn","Snow Angels: to increase blood flow and loosen your entire body","Plank Walk Outs: to engage your core, hamstrings, and shoulders","High Knees: get your blood pumping and activates the muscles","Hug knees to chest"]
 
 def order():
     if (x.get()==0):
@@ -42,9 +44,9 @@ def order():
     elif (x.get()==1):
         stand.get() 
     elif (x.get()==2):
-        lay_down.get()
+        floor.get()
     else:
-        print('Pick a position to do warm-ups') #maybe place button
+        print('Pick a location to do Warm-ups') # maybe place button
         
 
 def pick():
@@ -67,9 +69,9 @@ topLabel.pack(pady=50)
 #lay_down = PhotoImage(file=) #
 #positionimages= [chairimage,stand,lay_down] # Position for exercise
 
-chair_warmup=["Neck Stretch","Knee Lifts","Sit and Stand","Heel Slides","Tummy Twists for Abs","Seated Jumping Jacks","Seated Forward Bend","Knee to Chest","Ankle Rotations","Bicep curls with Resistance Bands"]
+chair=["Neck Stretch","Knee Lifts","Sit and Stand","Heel Slides","Tummy Twists for Abs","Seated Jumping Jacks","Seated Forward Bend","Knee to Chest","Ankle Rotations","Bicep curls with Resistance Bands"]
 stand=["Knee Lifts","Sit and Stand"]
-lay_down=["Knee to Chest", 'dead bug']
+Floor=["Knee to Chest",'dead bug']
 
 x= IntVar()
 
@@ -81,8 +83,8 @@ for index in range(len(choose_workout)):
                               variable=x, # groups radio together if they share the same v
                               value=index, #assigns each radio button a different value
                               padx =25,
-                              font= ("Impact",15),
-                              #image = positionimages[index], #image to radio button
+                              font= ("Helvetica",15),
+                              image = positionimages[index], #image to radio button
                               compound = 'left', #adds image & text to left of text
                               indicatoron=0, #eliminate circle indicatoron
                               width = 15, #sets the width of the button)
@@ -96,7 +98,7 @@ btn.pack(padx=20, pady=20)
 
 
 
-Button(root,text= "Close Warm UP Window", command=lambda: new_window.destroy()).pack(anchor=E) # Button to New warm up window
+Button(root,text="Close Warm UP Window",pady=7, bg="white", fg= "blue", border=1, command=lambda: new_window.destroy()).pack(anchor=E) # Button to New warm up window
 
 
 
