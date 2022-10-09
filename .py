@@ -1,19 +1,30 @@
 from tkinter import *
-#from PIL import ImageTk, Image
+from PIL import ImageTk, Image
 
 #Photo
 root = Tk() 
 #root.iconbitmap("E:\Gym-bor-e_tkinter_project\images\4042280_dumbell_gym_healthy life_take exercise_training_icon.png")
 #root.iconphoto(True, root)
 
-
-
 ####-Login setup--------
 root.geometry("925x500+300+200")#Set the geometry of frame
 root.title("Main_window")# Title of Application
-root.configure(bg="#fff")
+root.configure(bg="#E4F7FF")
 root.resizable(False,False) # can not be resizing window
 
+def sign():
+    username=user.get()
+    password=code.get()
+    
+    if username=='admin' and password=='1234':
+            screen=Toplevel(root)
+            screen.title("BAB")
+            screen. geometry("925x500+300+200")
+            screen.configure(bg="#E4F7FF")
+
+           
+            
+            
 #img = PhotoImage("E:\Gym-bor-e_tkinter_project\images\4042280_dumbell_gym_healthy life_take exercise_training_icon.png") #logo image
 #Label(root,image=img, bg= 'white'.place(x=50, y=50))
 

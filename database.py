@@ -4,7 +4,7 @@ import sqlite3
 
 
 root=Tk()
-root.title(user_registration)
+root.title("user_registration")
 
 #Connect a database
 conn = sqlite3.connect("user_registration.db")
