@@ -80,17 +80,8 @@ def openwindow():
     pickButton.pack()
     
     
-def open_window(self):
-       chair_workout = chair_workout(self)
-       chair_workout.grab_set()  
-        
-def open_window(self):
-       stand_workout = stand_workout(self)
-       stand_workout.grab_set() 
-       
-def open_window(self):
-       floor_workout = floor_workout(self)
-       floor_workout.grab_set()        
+
+
         
         
 x= IntVar() #is the radio button to function 
