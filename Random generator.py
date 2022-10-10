@@ -1,8 +1,10 @@
 from tkinter import * #Import the required Library
 from random import randint
-from tracemalloc import start
+
 from turtle import right
 from PIL import ImageTk 
+
+
 
 root = Tk() # initialize tkinter 
 root.title( "Random workout")# Title of Application
@@ -24,7 +26,7 @@ def warm():
     else:
         print('Pick a position to do warm-ups') # maybe place button 
 
-variable=y, # groups pick 1, pick2, pick 3 together if they share the same v
+variable=y # groups pick 1, pick2, pick 3 together if they share the same v
 
 new_window =""
 def openwindow():
@@ -135,7 +137,7 @@ def pick3():
     
        
 #Labels For 1st Page  
-welLabel = Label(root, text="Welcome!", fg ="blue", bg="#E4F7FF", font=("Helvetica",30)) #Welcom Label Header label 
+welLabel = Label(root, text="Welcome To Gymbore!", fg ="blue", bg="#E4F7FF", font=("Helvetica",30)) #Welcom Label Header label 
 welLabel.pack(pady=20)
 
 greetLabel = Label(root, text="Ready to Start Warm Up...", fg ="blue", bg="#E4F7FF", font=("Helvetica",15)) #Welcom Label Header label 
@@ -143,6 +145,9 @@ greetLabel.pack(pady=10)
 
 topLabel = Label(root, text="Now Pick Location", fg ="blue", bg="#E4F7FF", font=("Helvetica",10)) #Header label 
 topLabel.pack(pady=10)
+
+topLabel = Label(root, text="Instructions: Pick your workout location:chair,stand or floor. Then push got to workout. Another page will appear with your work out push start your work out. If you push several times you get more choices.", fg ="blue", bg="#E4F7FF", font=("Helvetica",10)) #Header label 
+topLabel.pack(S)
 
 #radio button
 def new_func():
@@ -175,5 +180,7 @@ btn.pack(padx=20, pady=20)
 
 Button(root,text="Close Warm UP Window",pady=7,padx=20, bg="#E4F7FF", fg= "blue", border=0, command=lambda: new_window.destroy()).pack(anchor=E) # Button to New warm up window
 
+
+   
 
 root.mainloop() # must have to display window  
