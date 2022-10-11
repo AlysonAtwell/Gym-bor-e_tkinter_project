@@ -13,7 +13,7 @@ root.configure(bg="#E4F7FF")
 root.resizable(False,False) # can not be resizing window
 
 y= IntVar() # initialize y value which are the picks for the radiobutton to link to button in new window pick button   
-    
+    # groups pick 1, pick2, pick 3 together if they share the same v
 def warm():
     if (Y.get()==0):
         return pick1
@@ -24,7 +24,6 @@ def warm():
     else:
         print('Pick a position to do warm-ups') # maybe place button 
 
-variable=y, # groups pick 1, pick2, pick 3 together if they share the same v
 
 new_window =""
 def openwindow():
@@ -79,7 +78,8 @@ def openwindow():
     pickButton = Button(stand_workout, text="Start Your Warm UP!!", font=("Helvetica",24),fg= "blue", bg="#E4F7FF", command = pick2) # Start Your Warm UP
     pickButton.pack()
              
-  
+  # Read and Display Image
+
 #need to fix command to pick and display only that one list
      
 #img = ImageTk.PhotoImage(Image.open(E:\Gym-bor-e_tkinter_project\photos for gui"))
@@ -148,9 +148,6 @@ topLabel.pack(pady=10)
 def new_func():
     x= IntVar()
     return x
-
-
-x = new_func()
 
 choose_workout = ['Chair', 'Stand', 'Floor']
 
