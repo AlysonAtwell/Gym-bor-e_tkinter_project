@@ -1,4 +1,6 @@
 
+#Gymbore Fitness is an application to pick your warm-up exercise randomly. Are you tired of the same old warm-up routines? Try Gymbore. Mix things up. We all need to warm up with stretches to warm our bodies up for the main weightlifting or cardio. Gymbore provides you with great opportunities that will prevent you from hurting yourself. 
+
 # Contributor Covenant Code of Conduct
 
 ## Our Pledge
